@@ -1,0 +1,32 @@
+CREATE TABLE users
+(
+id  SERIAL PRIMARY KEY,
+username text  NOT NULL UNIQUE ,
+pwd text NOT NULL
+);
+
+
+
+CREATE TABLE product
+(
+id  SERIAL PRIMARY KEY,
+item text  NOT NULL UNIQUE ,
+price int NOT NULL,
+stock int NOT NULL
+);
+
+CREATE TABLE cart
+(
+id SERIAL REFERENCES users(id), 
+item text  NOT NULL  ,
+price int NOT NULL,
+qnt int NOT NULL
+);
+
+CREATE TABLE history
+(
+id SERIAL REFERENCES users(id), 
+invoice text  NOT NULL  ,
+price int NOT NULL,
+date text NOT NULL
+);

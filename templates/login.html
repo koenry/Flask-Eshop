@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Login Page</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/static/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Mountains+of+Christmas&display=swap" rel="stylesheet">
+<script defer src="/static/app.js"></script>
+<body >
+   <div class="grid-container2">
+   {% for w in items %} 
+   
+    <p> {{ w[1] }} </p>
+    <p id={{w[1]}}a > price: {{w[2]}}</p>
+    <p> stock: {{w[3]}}</p>
+    <button id={{w[1]}}> add to cart </button>
+        {% endfor %}
+    <a href="http://127.0.0.1:5000/purchase">Purchase</a>
+    
+    <a href="http://127.0.0.1:5000/purchaseHis">Purchase History</a>
+    <a href="http://127.0.0.1:5000/logout">Logout</a>
+   </div> 
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Register</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/static/styles.css">
+<script src=""></script>
+<body >
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %} 
+                <h2 class="errorFlash">{{ message }}</h2>
+            {% endfor %} 
+        {% endif %}  
+    {% endwith %} 
+        <form action="{{ url_for("register22")}}" method="post">
+            <div class="index-html-grid-container">
+                <div class="index-html-grid-item">
+                    <label for="regusername">Username:</label>
+                    <input type="text" id="regusername" maxlength="14" name="regusername" placeholder="">
+                </div>
+                <div class="index-html-grid-item">
+                    <label for="regpassword">Password:</label>
+                    <input type="password" id="regpassword" maxlength="24" name="regpassword" placeholder="">
+                </div>
+                <div class="index-html-grid-item">
+                    <label for="regpassword2"> Password:</label>
+                    <input type="password" id="regpassword2" maxlength="24" name="regpassword2" placeholder="">
+                </div>
+                <div class="index-html-grid-item">
+                    <button class="indexBtn"  type="submit" name="registerBtn" value="Register" >Register</button>
+                    <a href="{{url_for('main')}}">Go back</a>
+                </div>
+                
+                
+            </div>
+            </form>
+     
+
+</body>
+</html>

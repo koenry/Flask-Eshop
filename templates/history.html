@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Login Page</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/static/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Mountains+of+Christmas&display=swap" rel="stylesheet">
+<script defer src="/static/app.js"></script>
+<body >
+    {% for w in hist %} 
+    <div class="grid-container">
+        <div class="grid-item">Nr: {{ w[1] }} </div>
+        <div class="grid-item">Cost: {{ w[2] }} EUR</div>
+        <div class="grid-item">Date of Purchase: {{ w[3] }}</div>  
+         
+      </div>
+      
+   
+        {% endfor %}
+        <a href="http://127.0.0.1:5000/login">Go back</a>
+</body>
+</html>
